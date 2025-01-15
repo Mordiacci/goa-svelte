@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home page with high priority -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod> <!-- Update this to reflect actual date -->
+    <changefreq>daily</changefreq> <!-- Updated frequently -->
+    <priority>1.0</priority> <!-- Highest priority -->
+  </url>
+
+  <!-- Introduction page -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/guide/introduction</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod> <!-- Update to actual last modification -->
+    <changefreq>weekly</changefreq> <!-- This content may change less frequently -->
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Classes guide page -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/guide/classes</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod> <!-- Update to actual last modification -->
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us page -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/about</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Us page -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/contact</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog page (example) -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/blog</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Individual blog post example -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/blog/how-to-play-adelia</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Frequently Asked Questions page -->
+  <url>
+    <loc>https://www.guardiansofadelia.com/faq</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

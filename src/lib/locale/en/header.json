@@ -1,0 +1,14 @@
+{
+  "guide": "guide",
+  "news": "news",
+  "map": "map",
+  "store": "store",
+  "login": "login",
+  "register": "register",
+  "profile": "profile",
+  "player": "player",
+  "characters": "characters",
+  "credits": "credits",
+  "buy_credits": "buy credits",
+  "logout": "logout"
+}
