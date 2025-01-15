@@ -1,1 +1,0 @@
-<h2 class="text-center text-9xl font-bold py-32 lg:py-52">404</h2>
