@@ -4,7 +4,7 @@
   export const prerender = true;
 
   // Example news articles to populate the cards dynamically
-  let newsArticles = [
+  export let newsArticles = [
     { title: "News Headline 1", content: "This is the content of the first article." },
     { title: "News Headline 2", content: "This is the content of the second article." },
     { title: "News Headline 3", content: "This is the content of the third article." },
@@ -15,28 +15,29 @@
   <title>Guardians of Adelia - News</title>
 </svelte:head>
 
-<div class="flex flex-col items-center gap-8 pt-16">
+<section class="news-container" aria-label="News Articles">
   {#each newsArticles as { title, content }}
-    <Card>
-      <h2 slot="header">{title}</h2>
-      <p>{content}</p>
-    </Card>
+    <article>
+      <Card>
+        <h2 slot="header">{title}</h2>
+        <p>{content}</p>
+      </Card>
+    </article>
   {/each}
-</div>
+</section>
 
 <style>
-  /* Optional: add some card styling here if needed */
-  .flex {
+  /* Container for news cards */
+  .news-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem; /* Consistent spacing between articles */
+    padding-top: 4rem; /* Matches original design */
   }
 
-  .gap-8 {
-    gap: 2rem;
-  }
-
-  .pt-16 {
-    padding-top: 4rem;
+  article {
+    width: 100%;
+    max-width: 600px; /* Ensures a consistent card size */
   }
 </style>
