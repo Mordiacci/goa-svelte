@@ -1,80 +1,95 @@
-@import './tailwind';
-@import './colors';
-@import './scrollbar';
+/*--------------------------------------------------------------
+Imports
+--------------------------------------------------------------*/
+@import './tailwind'; /* Tailwind utility classes */
+@import './colors'; /* Custom color definitions */
+@import './scrollbar'; /* Scrollbar styling */
 
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers */
 .screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
-    height: 1px;
     width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
+.screen-reader-text:focus,
 .screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-    background-color: #16161a;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    color: #fffffe;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
+.screen-reader-text:active {
+    position: static;
     width: auto;
-    z-index: 100000; /* Above WP toolbar */
+    height: auto;
+    margin: 0;
+    clip: auto !important;
+    white-space: normal;
+    background-color: #16161a;
+    color: #fffffe;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
 
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
 
+/* Root variables for consistent design */
 :root {
-    font-family: 'Exo', sans-serif;
+    --font-primary: 'Exo', sans-serif;
     --column-width: 42rem;
     --column-margin-top: 4rem;
+    --base-font-size: 16px;
+    --line-height: 1.5;
+    --heading-font-weight: 600;
+    --text-font-weight: 400;
 }
 
 body {
-    min-height: 100vh;
+    font-family: var(--font-primary);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background-color: #fff;
+    color: #000;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Headings */
 h1,
-h2,
-p {
-    font-weight: 400;
-}
-
-p {
-    line-height: 1.5;
+h2 {
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 h1 {
@@ -82,11 +97,35 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
+/* Paragraphs */
+p {
+    font-weight: var(--text-font-weight);
+    line-height: var(--line-height);
+    margin-bottom: 1rem;
+}
+
+/* Form Elements */
 input,
 button {
+    font-family: var(--font-primary);
     font-size: inherit;
-    font-family: inherit;
+}
+
+/*--------------------------------------------------------------
+Reset & Utilities
+--------------------------------------------------------------*/
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:focus {
+    outline: 2px solid #007bff; /* Focus indication for accessibility */
+    outline-offset: 2px;
 }
