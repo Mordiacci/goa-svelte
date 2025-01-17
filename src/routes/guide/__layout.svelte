@@ -4,26 +4,22 @@
   import Sidebar from "$lib/components/sidebar/Sidebar.svelte";
   import { page } from "$app/stores";
   import routes from "./routes";
-  import { onDestroy } from "svelte";
 </script>
 
 <script lang="ts">
-  let path = "";
-  const unsubscribePage = page.subscribe(({ routeId }) => (path = routeId));
+  // Reactive path derived from the page store
+  $: path = $page.routeId;
 
-  // Cleanup subscription on component destruction
-  onDestroy(unsubscribePage);
-
-  // Use reactive statements for derived values
+  // Reactive props for Sidebar
   $: sidebarProps = {
     routes,
     activeUrl: path,
   };
 </script>
 
-<section class="container mx-auto flex flex-col lg:flex-row gap-2 my-9 p-2 bg-base-50/[.8] rounded-lg">
+<section class="container mx-auto my-9 p-2 flex flex-col gap-2 bg-base-50/[.8] rounded-lg lg:flex-row">
   <Sidebar {...sidebarProps} />
-  <div class="pt-2 w-full">
+  <div class="w-full pt-2">
     <slot />
   </div>
 </section>
