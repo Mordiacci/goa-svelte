@@ -2,34 +2,59 @@
 <html class="dark" data-theme="mytheme" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Join the fantasy world of Adelia, a dungeon-driven Minecraft MMORPG!" />
+    <meta
+      name="description"
+      content="Join the fantasy world of Adelia, a dungeon-driven Minecraft MMORPG!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Lix3nn" />
-    <meta name="keywords" content="Guardians of Adelia, Minecraft MMORPG, Dungeons, Adventure, Server" />
+    <meta
+      name="keywords"
+      content="Guardians of Adelia, Minecraft MMORPG, Dungeons, Adventure, Server"
+    />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.guardiansofadelia.com/" />
-    <link rel="shortcut icon" href="%svelte.assets%/favicon.ico" type="image/x-icon" />
-    <link rel="preload" href="%svelte.assets%/favicon.ico" as="image" />
+    <link
+      rel="shortcut icon"
+      href="/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preload" href="/favicon.ico" as="image" />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/2f1de5cc1e.js" crossorigin="anonymous" defer></script>
+    <script
+      src="https://kit.fontawesome.com/2f1de5cc1e.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
     <title>Guardians Of Adelia | Dungeon-driven Minecraft MMORPG</title>
 
     <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Guardians Of Adelia | Dungeon-driven Minecraft MMORPG" />
-    <meta property="og:description" content="Embark on an adventure in Adelia! Explore, conquer dungeons, and fight bosses in this fantasy Minecraft MMORPG." />
-    <meta property="og:image" content="https://www.guardiansofadelia.com/static/media/logo.816d191c.webp" />
+    <meta
+      property="og:title"
+      content="Guardians Of Adelia | Dungeon-driven Minecraft MMORPG"
+    />
+    <meta
+      property="og:description"
+      content="Embark on an adventure in Adelia! Explore, conquer dungeons, and fight bosses in this fantasy Minecraft MMORPG."
+    />
+    <meta
+      property="og:image"
+      content="https://www.guardiansofadelia.com/static/media/logo.816d191c.webp"
+    />
     <meta property="og:image:alt" content="Guardians Of Adelia logo" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.guardiansofadelia.com/" />
     <meta property="og:site_name" content="Guardians Of Adelia" />
 
-    %svelte.head%
+    <!-- Svelte Head Injection -->
+    <svelte:head />
   </head>
   <body>
     <main class="flex flex-col min-h-screen justify-between text-base-900">
-      %svelte.body%
+      <!-- Svelte Body Injection -->
+      <svelte:body />
     </main>
   </body>
 </html>
